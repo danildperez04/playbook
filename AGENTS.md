@@ -12,14 +12,14 @@ bajo `/data/development`. Léelo antes de crear un proyecto o de cambiar el play
 
 ## 1. Qué hay aquí
 
-| Archivo / carpeta  | Para qué                                                                  |
-| ------------------ | ------------------------------------------------------------------------- |
-| `METODOLOGIA.md`   | Cómo se trabaja: sprints, issues, ciclo de una historia, entregas         |
-| `CONVENCIONES.md`  | Resumen de todas las convenciones; enlaza al detalle en `plantilla/`      |
-| `plantilla/`       | Repositorio base que se copia a cada proyecto nuevo                       |
-| `scripts/`         | `nuevo-proyecto.sh` (genera un repo) y `verificar-proyecto.sh` (lo audita) |
-| `tests/run.sh`     | Pruebas de los scripts y de la plantilla                                  |
-| `CHANGELOG.md`     | Cambios del playbook por versión                                          |
+| Archivo / carpeta | Para qué                                                                   |
+| ----------------- | -------------------------------------------------------------------------- |
+| `METODOLOGIA.md`  | Cómo se trabaja: sprints, issues, ciclo de una historia, entregas          |
+| `CONVENCIONES.md` | Resumen de todas las convenciones; enlaza al detalle en `plantilla/`       |
+| `plantilla/`      | Repositorio base que se copia a cada proyecto nuevo                        |
+| `scripts/`        | `nuevo-proyecto.sh` (genera un repo) y `verificar-proyecto.sh` (lo audita) |
+| `tests/run.sh`    | Pruebas de los scripts y de la plantilla                                   |
+| `CHANGELOG.md`    | Cambios del playbook por versión                                           |
 
 Los planes de trabajo no viven aquí: van en `/data/development/planes/<repo>/`.
 
