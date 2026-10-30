@@ -1,0 +1,46 @@
+name: Release
+
+# 1) release-please lee los Conventional Commits que llegan a main y mantiene abierto
+#    un PR de release (versión + CHANGELOG). Al mergearlo crea la etiqueta vX.Y.Z y el
+#    GitHub Release.
+# 2) Si el proyecto necesita publicar algo tras el release, agrega un job aquí con
+#    `needs: release-please` e `if: needs.release-please.outputs.created == 'true'`.
+#
+# Ese job va en este mismo workflow porque un release creado con GITHUB_TOKEN no
+# dispara otros workflows: un "on: release" separado nunca se ejecutaría.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  release-please:
+    name: Versión y CHANGELOG
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # etiqueta, Release y CHANGELOG
+      pull-requests: write # PR de release
+      issues: write # etiquetas autorelease
+    outputs:
+      created: ${{ steps.release.outputs.release_created }}
+      version: ${{ steps.release.outputs.version }}
+    steps:
+      - id: release
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        with:
+          # Token personal (secreto RELEASE_PLEASE_TOKEN): un PR abierto con GITHUB_TOKEN
+          # no dispara CI, y main exige sus checks, así que el PR de release quedaría
+          # bloqueado. Sin el secreto se usa GITHUB_TOKEN (el PR habría que mergearlo
+          # saltando los checks). Configuración: docs/05 §1.2.
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          target-branch: main
