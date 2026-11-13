@@ -120,14 +120,14 @@ Detalle en: `plantilla/AGENTS.md`, `plantilla/CONTRIBUTING.md` §5.
 
 ## 9. Planes de agentes
 
-- Los planes no van dentro de los repos: viven en `/data/development/planes/`.
+- Los planes no van dentro de los repos: viven en `~/Dev/planes/`.
 - Plan de un repositorio: `planes/<repo>/AAAA-MM-DD-<slug>.md`.
 - Plan que abarca varios repos o la máquina: `planes/general/`.
 - Encabezado: título, **Versión**, **Fecha**, **Estado** (`vigente` · `terminado` ·
   `descartado`).
 - Un plan terminado no se borra: se marca `terminado` y queda como historial.
 
-Detalle en: `/data/development/planes/README.md`, `plantilla/AGENTS.md` §5.
+Detalle en: `~/Dev/planes/README.md`, `plantilla/AGENTS.md` §5.
 
 ## 10. Cambiar estas convenciones
 
@@ -137,10 +137,11 @@ Detalle en: `/data/development/planes/README.md`, `plantilla/AGENTS.md` §5.
 - Un cambio aceptado actualiza la plantilla, este archivo y su historial en el mismo
   commit, y `tests/run.sh` debe seguir en verde.
 
-Detalle en: `/data/development/playbook/AGENTS.md`.
+Detalle en: `~/Dev/playbook/AGENTS.md`.
 
 ## Historial
 
-| Versión | Fecha       | Autor        | Cambio                         |
-| ------- | ----------- | ------------ | ------------------------------ |
-| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento |
+| Versión | Fecha       | Autor        | Cambio                              |
+| ------- | ----------- | ------------ | ----------------------------------- |
+| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento      |
+| 1.0.1   | 12 nov 2026 | Danild Pérez | Rutas `/data/development` → `~/Dev` |

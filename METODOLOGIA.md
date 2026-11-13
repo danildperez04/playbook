@@ -12,7 +12,7 @@ indica en qué archivo de `plantilla/` está el detalle. Las convenciones de nom
 commits y código están resumidas en `CONVENCIONES.md`.
 
 Los agentes de IA (Hermes, Claude, opencode, Copilot y similares) empiezan leyendo
-`/data/development/playbook/AGENTS.md`, que les dice cómo aplicar este documento.
+`~/Dev/playbook/AGENTS.md`, que les dice cómo aplicar este documento.
 
 ## 1. Marco de trabajo
 
@@ -170,7 +170,7 @@ Detalle en: `plantilla/docs/05-versionado-commits-y-ramas.md` §1 y §3.5–3.6,
   del alcance y validaciones ausentes.
 - Quien abre el PR responde por todo lo que contiene.
 - Los planes de trabajo del agente no van en el repo:
-  `/data/development/planes/<repo>/AAAA-MM-DD-<slug>.md`.
+  `~/Dev/planes/<repo>/AAAA-MM-DD-<slug>.md`.
 
 Detalle en: `plantilla/CONTRIBUTING.md` §5, `plantilla/docs/05-versionado-commits-y-ramas.md` §3.7,
 `plantilla/docs/17-revision-de-codigo.md` §4.
@@ -223,12 +223,12 @@ Las rutas son relativas al repositorio del proyecto; el original de cada una est
 
 ## 12. Cómo arrancar
 
-Desde `/data/development/playbook/`:
+Desde `~/Dev/playbook/`:
 
 ```bash
 scripts/nuevo-proyecto.sh ~/Dev/<slug> "<Nombre>" <slug> "Danild Pérez"
 cd ~/Dev/<slug> && git init -b main && pnpm install
-/data/development/playbook/scripts/verificar-proyecto.sh ~/Dev/<slug>
+~/Dev/playbook/scripts/verificar-proyecto.sh ~/Dev/<slug>
 ```
 
 Después:
@@ -237,12 +237,13 @@ Después:
 2. Agregar los alcances del dominio en `commitlint.config.mjs`.
 3. Seguir la lista del Sprint 0 (§2).
 
-Un agente que arranca un proyecto lee primero `/data/development/playbook/AGENTS.md`
+Un agente que arranca un proyecto lee primero `~/Dev/playbook/AGENTS.md`
 y luego este documento. Si detecta una mejora para el playbook, la propone según ese
 mismo `AGENTS.md`; no la aplica por su cuenta en un proyecto.
 
 ## Historial
 
-| Versión | Fecha       | Autor        | Cambio                         |
-| ------- | ----------- | ------------ | ------------------------------ |
-| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento |
+| Versión | Fecha       | Autor        | Cambio                              |
+| ------- | ----------- | ------------ | ----------------------------------- |
+| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento      |
+| 1.0.1   | 12 nov 2026 | Danild Pérez | Rutas `/data/development` → `~/Dev` |

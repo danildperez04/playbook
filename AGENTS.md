@@ -2,7 +2,7 @@
 
 Instrucciones para asistentes de código (Hermes, Claude, Cursor, Copilot, opencode y
 similares). Este repositorio define **cómo se crean y se trabajan todos los proyectos**
-bajo `/data/development`. Léelo antes de crear un proyecto o de cambiar el playbook.
+bajo `~/Dev`. Léelo antes de crear un proyecto o de cambiar el playbook.
 
 **Versión:** 1.0.0
 **Fecha:** 30 de octubre de 2026
@@ -21,15 +21,15 @@ bajo `/data/development`. Léelo antes de crear un proyecto o de cambiar el play
 | `tests/run.sh`    | Pruebas de los scripts y de la plantilla                                   |
 | `CHANGELOG.md`    | Cambios del playbook por versión                                           |
 
-Los planes de trabajo no viven aquí: van en `/data/development/planes/<repo>/`.
+Los planes de trabajo no viven aquí: van en `~/Dev/planes/<repo>/`.
 
 ## 2. Crear un proyecto nuevo
 
 ```bash
-/data/development/playbook/scripts/nuevo-proyecto.sh \
-  /data/development/<slug> "<Nombre visible>" <slug> "Danild Pérez"
-cd /data/development/<slug> && git init -b main
-/data/development/playbook/scripts/verificar-proyecto.sh .   # debe decir "Cumple las convenciones"
+~/Dev/playbook/scripts/nuevo-proyecto.sh \
+  ~/Dev/<slug> "<Nombre visible>" <slug> "Danild Pérez"
+cd ~/Dev/<slug> && git init -b main
+~/Dev/playbook/scripts/verificar-proyecto.sh .   # debe decir "Cumple las convenciones"
 ```
 
 Después, en el repo nuevo:
@@ -72,7 +72,7 @@ proponer un cambio siguiendo este proceso:
    (qué cambia, por qué, origen). El usuario revisa, mergea a `main` y fija la versión.
 7. **Propuestas grandes** (cambiar el flujo de ramas, la numeración de docs, una
    herramienta central): primero un plan en
-   `/data/development/planes/playbook/AAAA-MM-DD-<slug>.md` y esperar aprobación.
+   `~/Dev/planes/playbook/AAAA-MM-DD-<slug>.md` y esperar aprobación.
 
 Versionado del playbook (SemVer): MAJOR si un repo generado antes deja de cumplir el
 verificador; MINOR para reglas o archivos nuevos; PATCH para correcciones y redacción.
@@ -93,6 +93,7 @@ verificador; MINOR para reglas o archivos nuevos; PATCH para correcciones y reda
 
 ## Historial
 
-| Versión | Fecha       | Autor        | Cambio                         |
-| ------- | ----------- | ------------ | ------------------------------ |
-| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento |
+| Versión | Fecha       | Autor        | Cambio                              |
+| ------- | ----------- | ------------ | ----------------------------------- |
+| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento      |
+| 1.0.1   | 12 nov 2026 | Danild Pérez | Rutas `/data/development` → `~/Dev` |

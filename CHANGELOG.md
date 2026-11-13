@@ -5,6 +5,10 @@ SemVer según `AGENTS.md` §4.
 
 ## [Sin publicar]
 
+### Cambiado
+
+- Rutas de trabajo: `/data/development` pasa a `~/Dev` (la partición `/data` ya no existe).
+
 ## [1.0.0] — 2026-10-30
 
 ### Agregado
