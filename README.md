@@ -70,15 +70,16 @@ tests/run.sh
 
 ## 4. Documentos
 
-| Documento                                                | Para qué                                             |
-| -------------------------------------------------------- | ---------------------------------------------------- |
-| [`METODOLOGIA.md`](METODOLOGIA.md)                       | Marco de trabajo, ciclo de una historia, sprint, DoD |
-| [`CONVENCIONES.md`](CONVENCIONES.md)                     | Idiomas, docs, commits, ramas, versionado, código    |
-| [`AGENTS.md`](AGENTS.md)                                 | Cómo deben usar y mejorar el playbook los agentes    |
-| [`/data/development/planes/`](/data/development/planes/) | Planes de trabajo de los agentes, fuera de los repos |
+| Documento                            | Para qué                                             |
+| ------------------------------------ | ---------------------------------------------------- |
+| [`METODOLOGIA.md`](METODOLOGIA.md)   | Marco de trabajo, ciclo de una historia, sprint, DoD |
+| [`CONVENCIONES.md`](CONVENCIONES.md) | Idiomas, docs, commits, ramas, versionado, código    |
+| [`AGENTS.md`](AGENTS.md)             | Cómo deben usar y mejorar el playbook los agentes    |
+| [`~/Dev/planes/`](../planes/)        | Planes de trabajo de los agentes, fuera de los repos |
 
 ## Historial
 
-| Versión | Fecha       | Autor        | Cambio                         |
-| ------- | ----------- | ------------ | ------------------------------ |
-| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento |
+| Versión | Fecha       | Autor        | Cambio                              |
+| ------- | ----------- | ------------ | ----------------------------------- |
+| 1.0.0   | 30 oct 2026 | Danild Pérez | Creación inicial del documento      |
+| 1.0.1   | 12 nov 2026 | Danild Pérez | Rutas `/data/development` → `~/Dev` |

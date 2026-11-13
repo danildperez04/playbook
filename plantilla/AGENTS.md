@@ -54,7 +54,7 @@ Detalle en `docs/05-versionado-commits-y-ramas.md` §3. En corto:
 - Conventional Commits con los alcances de `commitlint.config.mjs` (alcance obligatorio).
 - Commits locales sí; `git push` y PR no: los hace la persona responsable.
 - Los planes de trabajo no van en el repo: se guardan en
-  `/data/development/planes/{{REPO}}/AAAA-MM-DD-<slug>.md`.
+  `~/Dev/planes/{{REPO}}/AAAA-MM-DD-<slug>.md`.
 
 ## 6. Documentación
 
@@ -63,6 +63,6 @@ el mismo commit y agrega una fila a su tabla de historial.
 
 ## 7. Convenciones comunes
 
-Este repo sigue el playbook en `/data/development/playbook` (`CONVENCIONES.md` y
+Este repo sigue el playbook en `~/Dev/playbook` (`CONVENCIONES.md` y
 `METODOLOGIA.md`). Si detectas una mejora que aplica a todos los proyectos, propónla en
 el playbook (ver su `AGENTS.md`) en lugar de desviarte aquí.
